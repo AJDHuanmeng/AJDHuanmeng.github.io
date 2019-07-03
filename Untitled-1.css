@@ -3,30 +3,18 @@
 
 body {
 	margin: 0px;
-	background-image: url(../%E5%9B%BE%E7%89%87/%E8%83%8C%E6%99%AF1.jpg);
+	background-image: url(../背景1.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% 100%;
 }
-.beijin3 {
-	background-repeat: no-repeat;
-	background-position: center 30px;
-	background-image: url(../%E5%9B%BE%E7%89%87/123124123.png);
-}
-
 
 .beijin2 {
-	background-image: url(../%E5%9B%BE%E7%89%87/%E8%83%8C%E6%99%AF3.png);
+	background-image: url(../背景3.png);
 	background-repeat: no-repeat;
 	background-position: right;
 	font-size: 16px;
 	font-weight: normal;
 	color: #09F;
 	padding: 10px;
-}
-
-.beijin1 {
-	background-image: url(../%E5%9B%BE%E7%89%87/bb3dd343ad4bd113bb83219854afa40f4afb0572.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
 }
