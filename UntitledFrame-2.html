@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<!-- Website Design By: www.happyworm.com -->
+<title>Demo : jPlayer as an audio playlist player</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../dist/skin/blue.monday/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="C:/Users/Administrator/Desktop/5班/网页代码/jquery.min.js"></script>
+<script type="text/javascript" src="C:/Users/Administrator/Desktop/5班/网页代码/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="C:/Users/Administrator/Desktop/5班/网页代码/jplayer.playlist.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+	new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_1",
+		cssSelectorAncestor: "#jp_container_1"
+	}, [
+	    {
+			title:"夜、萤火虫和你",
+			mp3:"http://music.163.com/song/media/outer/url?id=509720124.mp3",
+			oga:"http://music.163.com/song/media/outer/url?id=509720124.mp3"
+		},
+	    {
+			title:"One night (Instrumental Version)",
+			mp3:"http://music.163.com/song/media/outer/url?id=454494",
+			oga:"http://music.163.com/song/media/outer/url?id=454494"
+		},
+	    {
+			title:"潮鳴り",
+			mp3:"http://music.163.com/song/media/outer/url?id=22707008",
+			oga:"http://music.163.com/song/media/outer/url?id=22707008"
+		},
+		{
+			title:"遇见萤火",
+			mp3:"http://music.163.com/song/media/outer/url?id=1359613968",
+			oga:"http://music.163.com/song/media/outer/url?id=1359613968"
+		},
+		{
+			title:"夏·烟火",
+			mp3:"http://music.163.com/song/media/outer/url?id=539428072.mp3",
+			oga:"http://music.163.com/song/media/outer/url?id=539428072.mp3"
+		},
+		
+	
+	], {
+		playlistOptions: {
+        autoPlay: true,
+        enableRemoveControls: true
+      },
+      swfPath: "/js",
+      supplied: "mp3, oga",
+		wmode: "window",
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true,
+	
+		 
+	});
+});
+//]]>
+</script>
+<script type="text/javascript" src="../网页代码/jquery-2.0.2.min.js"></script>
+<script type="text/javascript" src="../网页代码/main.js"></script>
+	<style>
+	#loading{
+		background-color: #bd4932;
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		z-index: 1;
+		margin-top: 0px;
+		top: 0px;
+	}
+	#loading-center{
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+	#loading-center-absolute {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		height: 200px;
+		width: 200px;
+		margin-top: -100px;
+		margin-left: -100px;
+	}
+	#object{
+		width: 80px;
+		height: 80px;
+		background-color: #FFF;
+		-webkit-animation: animate 1s infinite ease-in-out;
+		animation: animate 1s infinite ease-in-out;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 60px;
+	}
+	@-webkit-keyframes animate {
+	  0% { -webkit-transform: perspective(160px); }
+	  50% { -webkit-transform: perspective(160px) rotateY(-180deg); }
+	  100% { -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg); }
+	}
+
+	@keyframes animate {
+	  0% { 
+	    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+	    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg); 
+	  } 50% { 
+	    transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+	    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg) ;
+	  } 100% { 
+	    transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+	    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+	  }
+	}
+    </style>
+</head>
+<body>
+<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+	<div class="jp-type-playlist">
+		<div class="jp-gui jp-interface">
+			<div class="jp-controls">
+				<button class="jp-previous" role="button" tabindex="0">previous</button>
+				<button class="jp-play" role="button" tabindex="0">play</button>
+				<button class="jp-next" role="button" tabindex="0">next</button>
+				<button class="jp-stop" role="button" tabindex="0">stop</button>
+			</div>
+			<div class="jp-progress">
+				<div class="jp-seek-bar">
+					<div class="jp-play-bar"></div>
+				</div>
+			</div>
+			<div class="jp-volume-controls">
+				<button class="jp-mute" role="button" tabindex="0">mute</button>
+				<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+				<div class="jp-volume-bar">
+					<div class="jp-volume-bar-value"></div>
+				</div>
+			</div>
+			<div class="jp-time-holder">
+				<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+			</div>
+			<div class="jp-toggles">
+				<button class="jp-repeat" role="button" tabindex="0">repeat</button>
+				<button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
+			</div>
+		</div>
+		<div class="jp-playlist">
+			<ul>
+				<li>&nbsp;</li>
+			</ul>
+		</div>
+		<div class="jp-no-solution">
+			<span>Update Required</span>
+			To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+		</div>
+	</div>
+</div>
+<div id="loading">
+		<div id="loading-center">
+			<div id="loading-center-absolute">
+				<div id="object"></div>
+			</div>
+		</div>
+	</div>
+		</header>
+		</div>
+	</div> 
+</body>
+
+</html>
