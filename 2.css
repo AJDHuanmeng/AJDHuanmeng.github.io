@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+.beijin1 {
+	margin: 0px;
+	background-image: url(../%E5%9B%BE%E7%89%87/%E8%83%8C%E6%99%AF1.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: 100% 100%;
+}
